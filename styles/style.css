@@ -4,6 +4,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: 0;
+  border: 0;
+  /* overflow: hidden; */
 }
 
 :root {
@@ -20,6 +23,10 @@
   --Very-Dark-Blue: hsl(216, 12%, 8%);
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: 'Overpass', sans-serif;
   background-color: var(--Very-Dark-Blue);
@@ -29,4 +36,108 @@ body {
   display: grid;
   place-items: center;
   font-size: clamp(0.9rem, 3.5vw, 1rem);
+}
+
+.card {
+  width: 90%;
+  max-width: 26rem;
+  height: 25rem;
+  display: grid;
+  place-items: center;
+  background-color: var(--Dark-Blue);
+  border-radius: 1.25rem;
+}
+
+.rating {
+  width: 85%;
+  height: 85%;
+  /* display: none; */
+}
+
+.rating img {
+  border-width: 10px;
+  border-radius: 50%;
+  padding: 0.8rem;
+  background-color: var(--Medium-Grey);
+}
+
+.rating h1,
+.thanks h1 {
+  margin: 1rem 0;
+  color: var(--White);
+  font-weight: 400;
+}
+
+.rating p,
+.thanks p {
+  color: var(--Light-Grey);
+  line-height: 1.5;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin: 2.1rem 0 1.5rem 0;
+  /* z-index: 10; */
+}
+
+.buttons button {
+  background-color: var(--Medium-Grey);
+  color: var(--White);
+  width: 3.1rem;
+  height: 3.1rem;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 50%;
+  font-weight: 400;
+  transition: all 0.2s ease-in;
+}
+
+.buttons button.active {
+  background-color: var(--Light-Grey);
+}
+
+.buttons button:hover {
+  background-color: var(--Orange);
+}
+
+.submit button {
+  cursor: pointer;
+  background-color: var(--Orange);
+  padding: 15px;
+  border-radius: 20px;
+  width: 100%;
+  font-weight: 700;
+  color: var(--White);
+  letter-spacing: 5px;
+  transition: all 0.2s ease-in;
+}
+
+.submit button:hover {
+  background-color: var(--White);
+  color: var(--Orange);
+}
+
+.thanks {
+  display: grid;
+  place-items: center;
+  width: 85%;
+  height: 85%;
+  text-align: center;
+  display: none;
+}
+
+.thanks img {
+  display: block;
+  margin: auto;
+}
+
+.message {
+  padding: 8px 10px;
+  border-radius: 1.2rem;
+  color: var(--Orange);
+  background-color: var(--Medium-Grey);
+  margin: 1.4rem 0;
+  display: inline-block;
 }
