@@ -20,7 +20,7 @@
   <body>
     <main class="card">
       <!-- Rating state start -->
-      <div class="rating">
+      <div class="rating" id="rating">
         <img src="./images/icon-star.svg" alt="start" />
         <h1>How did we do?</h1>
         <p>
@@ -36,17 +36,19 @@
           <button type="button">5</button>
         </div>
         <div class="submit">
-          <button type="submit" class="btn-submit">Submit</button>
+          <button type="submit" class="btn-submit" id="btn-submit">
+            Submit
+          </button>
         </div>
       </div>
       <!-- Rating state end -->
       <!-- Thank you state start -->
-      <div class="thanks">
+      <div class="thanks" id="thanks">
         <img src="./images/illustration-thank-you.svg" alt="thank you" />
 
         <div class="message">
           <!-- Add rating here -->
-          You selected <span id="rating">0</span> out of 5
+          You selected <span id="rating-value">0</span> out of 5
         </div>
 
         <h1>Thank you!</h1>
@@ -57,5 +59,7 @@
       </div>
     </main>
     <!-- Thank you state end -->
+
+    <script src="./scripts/script.js"></script>
   </body>
 </html>

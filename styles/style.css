@@ -96,6 +96,7 @@ body {
 
 .buttons button.active {
   background-color: var(--Light-Grey);
+  transform: rotateX(0deg) rotateY(0deg);
 }
 
 .buttons button:hover {
